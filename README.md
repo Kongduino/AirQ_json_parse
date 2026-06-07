@@ -1,5 +1,6 @@
 # AirQ_json_parse
 
+Code to push M5Stack's [Air Quality v1.1](https://docs.m5stack.com/en/core/Air_Quality_v1.1) device data to Meshtastic
 
 ![Air_Quality_02](Assets/Air_Quality_02.png)
 
