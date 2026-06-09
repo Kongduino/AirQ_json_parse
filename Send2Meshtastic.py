@@ -109,12 +109,12 @@ interface.sendData(
     portNum=portnums_pb2.PortNum.TELEMETRY_APP,
     wantResponse=False,
 )
-time.sleep(30)
-
-telemetry_data = telemetry_pb2.Telemetry()
-telemetry_data.time = int(time.time())
-telemetry_data.environment_metrics.temperature = parsed_value.get('sen55').get('temperature')
-telemetry_data.environment_metrics.relative_humidity = parsed_value.get('sen55').get('humidity')
+# time.sleep(30)
+# 
+# telemetry_data = telemetry_pb2.Telemetry()
+# telemetry_data.time = int(time.time())
+# telemetry_data.environment_metrics.temperature = parsed_value.get('sen55').get('temperature')
+# telemetry_data.environment_metrics.relative_humidity = parsed_value.get('sen55').get('humidity')
 # telemetry_data.environment_metrics.barometric_pressure = 0
 # telemetry_data.environment_metrics.gas_resistance = 0
 # telemetry_data.environment_metrics.voltage = 0
@@ -130,13 +130,13 @@ telemetry_data.environment_metrics.relative_humidity = parsed_value.get('sen55')
 # telemetry_data.environment_metrics.wind_gust = 0
 # telemetry_data.environment_metrics.wind_lull = 0
 # telemetry_data.environment_metrics.weight = 0
-print(telemetry_data)
-
-interface.sendData(
-    telemetry_data,
-    destinationId=BROADCAST_ADDR,
-    portNum=portnums_pb2.PortNum.TELEMETRY_APP,
-    wantResponse=False,
-)
+# print(telemetry_data)
+# 
+# interface.sendData(
+#     telemetry_data,
+#     destinationId=BROADCAST_ADDR,
+#     portNum=portnums_pb2.PortNum.TELEMETRY_APP,
+#     wantResponse=False,
+# )
 
 interface.close()
